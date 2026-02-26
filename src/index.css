@@ -1,0 +1,79 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+h1,
+h2,
+h3,
+h4,
+.font-display {
+  font-family: var(--font-outfit), sans-serif;
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/5 backdrop-blur-md border border-white/10;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  }
+}
+
+main>section {
+  content-visibility: auto;
+  contain-intrinsic-size: 100vh;
+}
+
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #0a0a0a;
+  color: #fff;
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  margin: 0 auto;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Base custom styles for GSAP and Framer to work efficiently */
+/* removed scroll-behavior: smooth as Lenis handles it now */
+
+.gradient-text {
+  @apply text-transparent bg-clip-text bg-gradient-to-r from-primary-light to-accent;
+}
+
+/* Optimization Utilities */
+.will-change-transform {
+  will-change: transform;
+}
+
+.will-change-opacity {
+  will-change: opacity;
+}
+
+.accelerate {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
