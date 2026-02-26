@@ -61,6 +61,27 @@ A high-performance, visually stunning developer portfolio built with the latest 
 
 ---
 
+## 🚀 Deployment
+
+You can host this portfolio for free in just a few minutes! We recommend **Vercel** for its excellent React/Vite support.
+
+### Option 1: Vercel (Recommended)
+1. **Push your code to GitHub** (if you haven't already).
+2. Go to [vercel.com](https://vercel.com/) and sign up with your GitHub account.
+3. Click **"New Project"**.
+4. Import your `portfolio` repository.
+5. Vercel will auto-detect **Vite** settings. Click **"Deploy"**.
+6. Your site will be live at `your-project-name.vercel.app`!
+
+### Option 2: Netlify
+1. Go to [netlify.com](https://www.netlify.com/) and sign up with GitHub.
+2. Click **"Add new site"** > **"Import an existing project"**.
+3. Select your repository.
+4. Set Build command to `npm run build` and Publish directory to `dist`.
+5. Click **"Deploy"**.
+
+---
+
 ## ⚙️ Performance Optimizations
 
 This project implements several advanced techniques to ensure a smooth 60fps experience:
